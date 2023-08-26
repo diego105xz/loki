@@ -49,9 +49,13 @@ main{
 
 
 .card{
-    margin-right: 100px;
+    margin-right: 50px;
 }
 
+.descricao{
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
 .descricao p{
     width: 60ch;
@@ -85,11 +89,17 @@ main{
     margin-right: 20px;
 }
 
+.botoes{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
 
 .btn1{
     color: #fff;
     text-decoration: none;
     font-weight: 700;
+    text-align: center;
     font-size: 1rem;
     background-color: #0072D2;
     padding: 15px 27px;
@@ -106,7 +116,7 @@ main{
     background-color: #131318fd;
     padding: 15px 25px;
     border-radius: 3px;
-    margin-left: 20px;
+    text-align: center;
     display: inline-block;
     border: 1px solid #FFF;
     cursor: pointer;
@@ -118,4 +128,72 @@ main{
 
 .btn2:hover{
     opacity: 0.7;
+}
+
+
+@media (max-width: 1000px) {
+    .card{
+        display: none;
+    }
+
+    main{
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 730px) {
+    .titulo span{
+        font-size: 1.125rem;
+    }
+
+    .titulo h1{
+        font-size: 4rem;
+    }
+
+    .time{
+        font-size: 1rem;
+    }
+
+    .time img{
+        width: 18px;
+    }
+
+    .stars img{
+        width: 20px;
+    }
+
+    .ano{
+        font-size: 1rem;
+        margin-right: 0px; 
+    }
+
+    .avalicao{
+        padding: 20px 30px;
+        margin: 0px;
+    }
+
+    .descricao p{
+        border-top: 4px solid  #C4C4C414;
+        grid-row: 3;
+        background-color: #19191F;
+        width: 100%;
+        padding: 20px 30px;
+        font-size: 0.87rem;
+        line-height: 19.6px;
+    }
+
+    .botoes{
+        border-radius: 20px 20px 0px 0px;
+        margin-bottom: 0px;
+        background-color: #19191F;
+        width: 100%;
+        padding: 30px 30px;
+        justify-content: space-between;
+    }
+
+    .btn1, .btn2{
+        padding: 8px 16px;
+        width: 50%;
+        font-size: 0.87rem;
+    }
 }
